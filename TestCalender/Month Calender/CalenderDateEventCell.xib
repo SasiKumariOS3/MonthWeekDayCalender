@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalenderDateEventCell" id="gTV-IL-0wX" customClass="CalenderDateEventCell" customModule="TestCalender" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ3-PM-DmI">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-Us-Iqx">
+                                <rect key="frame" x="3" y="3" width="21" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJL-zD-fFi">
+                                        <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="9bC-Fg-ubC"/>
+                                    <constraint firstAttribute="height" constant="21" id="X6q-Vr-PVl"/>
+                                    <constraint firstItem="dJL-zD-fFi" firstAttribute="height" secondItem="z7a-Us-Iqx" secondAttribute="height" id="bx4-qm-5fc"/>
+                                    <constraint firstItem="dJL-zD-fFi" firstAttribute="centerY" secondItem="z7a-Us-Iqx" secondAttribute="centerY" id="hFf-h4-ysY"/>
+                                    <constraint firstItem="dJL-zD-fFi" firstAttribute="width" secondItem="z7a-Us-Iqx" secondAttribute="width" id="sIZ-tG-cS4"/>
+                                    <constraint firstItem="dJL-zD-fFi" firstAttribute="centerX" secondItem="z7a-Us-Iqx" secondAttribute="centerX" id="ttK-iM-Tga"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-kI-86U">
+                                <rect key="frame" x="0.0" y="27" width="50" height="23"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTS-5O-7yf">
+                                <rect key="frame" x="0.0" y="27" width="50" height="23"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-1" id="65I-iu-tb2"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CTS-5O-7yf" secondAttribute="bottom" id="5c7-rF-th2"/>
+                            <constraint firstAttribute="trailing" secondItem="CTS-5O-7yf" secondAttribute="trailing" id="79C-gh-7hc"/>
+                            <constraint firstAttribute="bottom" secondItem="OgL-kI-86U" secondAttribute="bottom" id="NzM-pv-TWt"/>
+                            <constraint firstItem="CTS-5O-7yf" firstAttribute="top" secondItem="z7a-Us-Iqx" secondAttribute="bottom" constant="3" id="TGU-GP-ef1"/>
+                            <constraint firstItem="z7a-Us-Iqx" firstAttribute="leading" secondItem="mQ3-PM-DmI" secondAttribute="leading" constant="3" id="X12-Q0-cb5"/>
+                            <constraint firstItem="CTS-5O-7yf" firstAttribute="leading" secondItem="mQ3-PM-DmI" secondAttribute="leading" id="XeT-hh-tsT"/>
+                            <constraint firstAttribute="trailing" secondItem="OgL-kI-86U" secondAttribute="trailing" id="gfy-fF-44K"/>
+                            <constraint firstItem="OgL-kI-86U" firstAttribute="leading" secondItem="mQ3-PM-DmI" secondAttribute="leading" id="hYY-tS-T38"/>
+                            <constraint firstItem="z7a-Us-Iqx" firstAttribute="top" secondItem="mQ3-PM-DmI" secondAttribute="top" constant="3" id="tz7-jh-FcJ"/>
+                            <constraint firstItem="OgL-kI-86U" firstAttribute="top" secondItem="z7a-Us-Iqx" secondAttribute="bottom" constant="3" id="wJu-hc-Kvf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mQ3-PM-DmI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Qm-MQ-GgU"/>
+                <constraint firstItem="mQ3-PM-DmI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BqS-ry-N4l"/>
+                <constraint firstAttribute="bottom" secondItem="mQ3-PM-DmI" secondAttribute="bottom" id="CQe-QK-ziD"/>
+                <constraint firstAttribute="trailing" secondItem="mQ3-PM-DmI" secondAttribute="trailing" id="flr-qT-lCJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="lbl_Daytxt" destination="dJL-zD-fFi" id="MFY-gN-Zpg"/>
+                <outlet property="vw_Astrology" destination="OgL-kI-86U" id="Z23-ZQ-VDA"/>
+                <outlet property="vw_DayBac" destination="mQ3-PM-DmI" id="mK7-dm-7pW"/>
+                <outlet property="vw_Events" destination="CTS-5O-7yf" id="E5k-Os-88n"/>
+                <outlet property="vw_todaybac" destination="z7a-Us-Iqx" id="0Bj-Vg-5IO"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </collectionViewCell>
+    </objects>
+</document>
